@@ -36,7 +36,7 @@
         </div>
         <div class="form-group">
             <label for="duracion">Duración</label>
-            <input value="{{ old('duracion', $cancion->duracion) }}" type="time" class="form-control" id="duracion" name="duracion">
+            <input value="{{ old('duracion', $cancion->duracion) }}" type="time" step="1" class="form-control" id="duracion" name="duracion">
             @error('duracion')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
