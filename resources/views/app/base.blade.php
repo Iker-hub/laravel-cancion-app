@@ -43,10 +43,6 @@
                 @endif
                 <div class="row">
                     <h3>{{ $subTitle ?? 'Bicicletas' }}</h3>
-                    &nbsp;&nbsp;&nbsp;
-                    <h3>{{ $subTitle ?? 'Personas' }}</h3>
-                    &nbsp;&nbsp;&nbsp;
-                    <h3>{{ $subTitle ?? 'Canciones' }}</h3>
                 </div>
                 @yield('content')
                 <hr>
