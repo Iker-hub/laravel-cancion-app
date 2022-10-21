@@ -64,7 +64,7 @@
         </div>
         <div class="form-group">
             <label for="fechapublicacion">Fecha de publicación</label>
-            <input value="{{ old('fechapublicacion', $cancion->fechapublicacion) }}" type="date" class="form-control" id="fechapublicacion" name="fechapublicacion">
+            <input value="{{ old('fechapublicacion', $cancion->fechapublicacion) }}" required type="date" class="form-control" id="fechapublicacion" name="fechapublicacion">
             @error('fechapublicacion')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
