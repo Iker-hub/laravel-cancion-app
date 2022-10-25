@@ -36,7 +36,7 @@ class CancionController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
+    public function store(CancionCreateRequest $request) {
         $cancion = new Cancion($request->all());
         $cancion->save();
         return redirect('cancion');
@@ -73,7 +73,7 @@ class CancionController extends Controller {
      * @param  \App\Models\Cancion  $cancion
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cancion $cancion) {
+    public function update(CancionEditRequest $request, Cancion $cancion) {
         $cancion->update($request->all());
         return redirect('cancion');
     }
