@@ -25,6 +25,9 @@
 @endsection
 
 @section('content')
+    @php
+        use Carbon\Carbon;
+    @endphp
 {{-- @parent --}}
 <div class="row" style="margin-top: 8px;">
     <table class="table table-striped">
@@ -55,7 +58,8 @@
                     <td>{{ $cancion->genero }}</td>
                     <td>{{ $cancion->album }}</td>
                     <td>{{ $cancion->orden }}</td>
-                    <td>{{ $cancion->fechapublicacion }}</td>
+                    <!-- <td>{{ $cancion->fechapublicacion }}</td> -->
+                    <td>{{ Carbon::parse($cancion->fechapublicacion)->format('d/m/Y') }}</td>
                     <td><a href="javascript: void(0);"
                            class = "deleteRow"
                            data-name="{{ $cancion->titulo }}"

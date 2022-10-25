@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CancionEditRequest extends FormRequest {
+class CancionCreateRequest extends FormRequest {
     
     /**
      * Determine if the user is authorized to make this request.
@@ -35,7 +35,7 @@ class CancionEditRequest extends FormRequest {
      */
     public function rules() {
         return [
-            'titulo'           => 'required|string|min:1|max:80|unique:cancion,titulo'.$this->cancion->id,
+            'titulo'           => 'required|string|min:1|max:80|unique:cancion,titulo',
             'interprete'       => 'required|string|min:1|max:100',
             'autor'            => 'nullable|string|min:1|max:100',
             'duracion'         => 'nullable|date_format:H:i:s',
